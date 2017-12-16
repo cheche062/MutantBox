@@ -136,7 +136,6 @@ package game.module.armyGroup
 					this.close();
 					break
 				
-					break
 			}
 		}
 		
