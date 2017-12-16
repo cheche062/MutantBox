@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    body {
+        background-color: #0f1620;
+    }
+    
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .dom-text p {
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="dom-text">
+        <p></p>
+    </div>
+</body>
+<script type="text/javascript">
+var srcArr = ["https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_000-11d101ef50.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_001-38cd2997ba.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_002-3d5c2bb2d4.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_003-f4a49f7737.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_004-027a6f781b.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_005-8138b93364.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_006-b81fa70547.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_007-8c1cdba015.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_008-3d4a099be9.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_009-3d4a099be9.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_010-3d4a099be9.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_011-3d4a099be9.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_012-3d4a099be9.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_013-3d4a099be9.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_014-739045e973.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_015-f142b01dd4.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_016-17ad0d072a.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_017-19f6e73030.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_018-6244bbc34d.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_019-ce85a10242.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_020-1ab4aa73f5.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_021-0a2fdb0ef3.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_022-b1eded959b.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_023-637d0a6a67.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_024-ea0212bdd2.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_025-5be89ac727.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_026-8096fa3e72.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_027-54fe164bd3.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_028-0c96e9d04d.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_029-d57d0e1809.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_030-74a4f342c5.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_031-af4c5b2f04.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_032-94299536a0.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_033-fd75b1ef2e.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_034-122f17a17b.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_035-329ec5a558.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_036-c40483939c.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_037-0d58f32fcf.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_038-1f76e15968.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_039-c0aed329e7.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_040-246c6077a1.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_041-66e7be3ad0.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_042-8c1ad634a1.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_043-4e6a9b6bcb.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_044-fc546371d8.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_045-ed0cdec155.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_046-6480ce322d.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_047-9fe28a9d4b.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_048-0aa78c709f.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_049-47dee462ec.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_050-25598c58fd.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_051-d2b2438b5b.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_052-c4d88108c7.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_053-c4d88108c7.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_054-c4d88108c7.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_055-c4d88108c7.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_056-bb1f827e2d.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_057-5428fc7a7e.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_058-6bb9006fb0.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_059-47dd9d79f2.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_060-56ce2fa198.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_061-e2670af9b7.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_062-3bce0822da.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_063-c4404d448b.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_064-34e95d76a1.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_065-eeb58fb1e8.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_066-2eeff4605c.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_067-e829445143.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_068-144fdabd56.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_069-0d3f0be2f2.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_070-7d3d556f45.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_071-7c539a15f5.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_072-10873bad5a.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_073-4d3b634af0.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_074-b80ce35b63.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_075-b08e69608f.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_076-1e2ad9d631.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_077-1efb1fc7f7.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_078-a09e3b4840.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_079-ac45286db7.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_080-14b1725d58.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_081-9aa77c68d5.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_082-fcfc184f5a.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_083-d9890320f2.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_084-0be211a6da.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_085-67d0fb9a30.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_086-7e36f83dac.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_087-5749346f9d.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_088-ab975c9b12.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_089-42f3742e87.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_090-83ab82cccd.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_091-2f63bf828c.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_092-3acdb22038.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_093-00c2a8c2d3.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_094-7326adc43b.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_095-9a367705c3.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_096-8ef95ad049.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_097-0903afecac.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_098-44d5c2f8a3.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_099-1a0a94bedf.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_100-3cc77f6fb2.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_101-104f9e8481.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_102-6056545b9a.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_103-b0141bc42e.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_104-f395f55e14.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_105-f424b8ba04.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_106-2a833e5e75.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_107-1b9f7ad31f.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_108-11ea0b8b63.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_109-96ca9d8c13.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_110-4303ccc5af.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_111-900c6616f9.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_112-14b7f26ddc.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_113-a3cf23483c.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_114-69a5177d3f.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_115-4ef62450cb.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_116-94f9c6adbc.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_117-4ce7b21565.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_118-ca7fbc3450.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_119-7a7036e827.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_120-56b9ae54a9.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_121-690734b410.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_122-5cf2c8bff7.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_123-8f224bda52.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_124-e2f43ac79d.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_125-13da75fd4f.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_126-36c7e81d4b.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_127-66e7b70702.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_128-66e7b70702.png?version=3.0.7", "https://cdn.mutantbox.com/00/03/Home/images/Mutantbox_129-66e7b70702.png?version=3.0.7"]
+
+// srcArr[50] = 'r';
+function MutantBox() {
+    var currentIndex = 0;
+    var dom_body = document.getElementsByTagName('body')[0];
+    var dom_p = document.getElementsByTagName('p')[0];
+    var img = new Image();
+    var timer = null;
+
+    this.init = function() {
+        this.addEvent();
+
+        //第一次执行
+        this.loadNextImg();
+    }
+
+    this.addEvent = function() {
+        var _this = this;
+        img.onload = function(e) {
+            currentIndex++;
+            // _this.loadNextImg();
+
+            console.log(e);
+        }
+
+        img.onerror = function() {
+            srcArr.splice(currentIndex, 1);
+            _this.loadNextImg();
+            console.log('加载失败: ' + currentIndex);
+        }
+
+        window.onerror = function(err) {
+            alert(err);
+        }
+    }
+
+    //加载下一张图片
+    this.loadNextImg = function() {
+        var _this = this;
+        var txt = 'loading' + parseInt((currentIndex / srcArr.length) * 100) + '%...';
+        _this.renderText(txt);
+
+        if (srcArr[currentIndex]) {
+            _this.changeImgSrc(srcArr[currentIndex]);
+
+        } else {
+            img.onload = null;
+            img.onerror = null;
+
+            _this.showAnimation();
+        }
+    }
+
+    // 修改图片地址
+    this.changeImgSrc = function(src) {
+        img.src = src;
+    }
+
+    this.renderText = function(txt) {
+        dom_p.innerHTML = txt;
+    }
+
+    //开始动画
+    this.showAnimation = function() {
+        var _this = this;
+        var base = 1;
+        dom_body.appendChild(img);
+        _this.renderText('loaded!');
+        currentIndex = 0;
+
+
+        var fn = function() {
+            if (srcArr[currentIndex]) {
+                _this.changeImgSrc(srcArr[currentIndex]);
+
+                currentIndex += base;
+
+            } else {
+            	clearInterval(timer);
+            	timer = null;
+
+                if (currentIndex === -1) {
+                    dom_body.removeChild(img);
+                    _this.renderText('end!');
+
+                } else {
+                    setTimeout(function(){
+                    	base = -1;
+                    	currentIndex = srcArr.length - 1;
+				        timer = setInterval(fn, 50);
+                    }, 2000)
+                }
+            }
+        }
+
+        timer = setInterval(fn, 50);
+    }
+
+    // 初始化
+    this.init();
+}
+
+new MutantBox();
+
+
+
+
+
+
+
+
+</script>
+
+</html>
