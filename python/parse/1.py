@@ -9,7 +9,5 @@ html = b.decode()
 
 results = re.findall(r'<a href=.*?title="(\w+)\">.*?</a>', html)
 
-
-
-print(results)
+print(results) 
 print(len(results))
