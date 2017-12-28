@@ -10,9 +10,10 @@ stage.rotate(Math.PI / 180 * rotate);       旋转（角度 -> 弧度）
 stage.save(); 保存画布的状态
 stage.restore(); 返回画布上一个状态
 
-
 3. 画图 (图片元素, (图片在背景图中的坐标-正数: bgX, bgY), (元素尺寸: w, h), (在画布中的坐标: x, y), (元素尺寸: w, h))
 stage.drawImage(img, bgX, bgY, w, h, x, y, w, h);
+
+4. 重新绘制（只有在需要更新时才去重新绘制）
 
 
 
