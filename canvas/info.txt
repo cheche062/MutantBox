@@ -1,20 +1,27 @@
-1. 获取
+﻿1. 获取
 var canvas = document.getElementById("id");
-var stage = canvas.getContext("2d");
+var context = canvas.getContext("2d");
 
-2. stage画布 
+2. context画布 
 创建元素需要记住始终围绕以画布状态为基准展开进行绘制.
-stage.clearRect(0, 0, 50, 50)               清除
-stage.translate(100, 100)                   移动
-stage.rotate(Math.PI / 180 * rotate);       旋转（角度 -> 弧度）
-stage.save(); 保存画布的状态
-stage.restore(); 返回画布上一个状态
+context.clearRect(0, 0, 50, 50)               清除
+context.translate(100, 100)                   移动
+context.rotate(Math.PI / 180 * rotate);       旋转（角度 -> 弧度）
+context.save(); 保存画布的状态
+context.restore(); 返回画布上一个状态
 
 3. 画图 (图片元素, (图片在背景图中的坐标-正数: bgX, bgY), (元素尺寸: w, h), (在画布中的坐标: x, y), (元素尺寸: w, h))
-stage.drawImage(img, bgX, bgY, w, h, x, y, w, h);
+context.drawImage(img, bgX, bgY, w, h, x, y, w, h);
 
-4. 重新绘制（只有在需要更新时才去重新绘制）
+4. 指定透明颜色，用于描边和填充样式
+context.strokeStyle = "rgba(255,0,0,0.5)";
+context.fillStyle = "rgba(255,0,0,0.5)";
 
-
+5.  
+context.beginPath();
+context.moveTo(75,50);
+context.lineTo(100,75);
+context.lineTo(100,25);
+context.fill();
 
 
