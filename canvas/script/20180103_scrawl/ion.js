@@ -8,7 +8,7 @@ var img = new Image();
 var speed = 6;
 
 img.onload = function() {
-    
+
     button.onclick = function() {
         var dotList =  init(input.value);
         startAnimate(dotList);
@@ -60,10 +60,7 @@ class Dot {
         }
     }
 
-    // t 当前时间
-    // b 初始值
-    // c 总位移
-    // d 总时间
+    // t 当前时间 b 初始值 c 总位移 d 总时间
     easeInOutCubic (t, b, c, d) {
         if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
         return c / 2 * ((t -= 2) * t * t + 2) + b;
