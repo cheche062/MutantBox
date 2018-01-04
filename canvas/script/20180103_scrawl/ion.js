@@ -18,7 +18,6 @@ function init(){
     for (let x = 0, w = img.width; x < w; x+=6) {
         for (let y = 0, h = img.height; y < h; y+=6) {
             let cur = (y * w + x) * 4;
-            // let cur = ((y - 1) * w + x) * 4;
             if (imagedata.data[cur + 3] !== 0){
                 dotList.push({x, y});
             }
