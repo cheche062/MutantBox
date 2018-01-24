@@ -11,13 +11,14 @@ dict1 = {
 }
 
 girls = ["marry", "momo", "hany", "alic"]
-letterGirls = {}
 
-def hello(name):
-    print('hello', name)
+for key, value in dict1.items():
+    print(key, value)
 
-hello("cheche")
+for i, value in enumerate(girls):
+    print(i, value)
 
+print(key, i, value)
 
     
     
