@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<title>Rogue Warriors</title>
+	<meta name='viewport' content='width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'/>
+	<meta name='apple-mobile-web-app-capable' content='yes' />
+	<meta name='full-screen' content='true' />
+	<!--<meta name='screen-orientation' content='portrait' />-->
+	<meta name='laya' screenorientation='landscape'>
+	<meta name='x5-fullscreen' content='true' />
+	<meta name='360-fullscreen' content='true' />
+	<meta name="renderer" content="webkit"/>
+	<meta http-equiv='expires' content='0' />
+	<meta name="browsermode" content="application">
+	<meta name="x5-page-mode" content="app">
+	<meta name='laya' logoimg='logo.png' logobkcolor='#ffffff' screenorientation='landscape' cacheid='fffffffff' />
+</head>
+<body style='margin:0;overflow:none;overflow-x:hidden;overflow-y:hidden;background-color: #000;'>
+<script src='msgpack.min.js' loader='msgpack'></script>
+<script src='jszip.min.js' loader='jszip'></script>
+<script type="text/javascript">
+	
+	function encodeByt(params){
+		var buffer = msgpack.encode(params);
+		return 	buffer;    
+    }
+    function decodeByt(params){
+		var _obj = msgpack.decode(params);
+		return 	_obj;    
+    }
+	
+	function compressByt(params){
+		var deflate = new Zlib.Deflate(params);
+		var compressed = deflate.compress();
+		return 	compressed;    
+
+            }
+	function decompressByt(params){
+		var inflate = new Zlib.Inflate(params);
+		var plain = inflate.decompress();
+			   
+		return plain;
+            }
+	function MD5Compress(params){
+		var _md5Str=hex_md5(params);
+		return _md5Str;
+	}
+	
+	function decompressFile(params, flieName){
+		var zip = new JSZip(params);
+		return zip.file(flieName).asText();
+     }
+	
+</script>
+<script src='MainGame.max.js' loader='laya'></script>
+</body>
+</html>

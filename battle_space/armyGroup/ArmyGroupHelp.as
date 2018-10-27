@@ -8,7 +8,7 @@ package game.module.armyGroup
 	import game.global.GameLanguage;
 	
 	import laya.events.Event;
-	import laya.utils.Handler;
+	import laya.utils.Handler; 
 	
 	/**
 	 * ArmyGroupHelp
